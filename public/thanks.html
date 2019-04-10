@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Thank You</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a awesome thanks page">
+        <meta name="keywords" content="thanks, awesome, programmer, geek squad, robots, jobs
+        ">
+        <link rel="shortcut icon" href="https://zeyeland.com/images/robot.gif" />
+        <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
+    </head>
+    <body>
+        <header>
+                <span class="logo">My WebSite</span>
+                <a id="toggleMenu">Menu<a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+       <p>Thank you for sending an email. I will reply shortly.</p>
+       <script>
+
+            var toggleMenu = document.getElementById('toggleMenu');
+            var nav = document.querySelector('nav');
+            toggleMenu.addEventListener(
+              'click',
+              function(){
+                if(nav.style.display=='block'){
+                  nav.style.display='none';
+                }else{
+                  nav.style.display='block';
+                }
+              }
+            );
+    </script>
+    </body>
+</html>
