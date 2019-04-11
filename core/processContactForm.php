@@ -39,9 +39,9 @@ if(!empty($input)){
 
     if(empty($valid->errors)){
         require '../core/mailgun.php';
-        $message = "<div class=\"message-success\">Your form has been submitted!</div>";
+        $message = "<div class=\"alert alert-success\">Your form has been submitted!</div>";
         //header('Location: thanks.php');
     }else{
-        $message = "<div class=\"message-error\">Your form has errors!</div>";
+        $message = "<div class=\"alert alert-danger\">Your form has errors!</div>";
     }
 }

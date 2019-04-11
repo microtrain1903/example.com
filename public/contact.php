@@ -13,26 +13,26 @@ $content=<<<EOT
   
   <input type="hidden" name="subject" value="New submission!">
   
-  <div>
-  <label for="name">Name</label>
-    <input id="name" type="text" name="name" value="{$valid->userInput('name')}">
-    <div class="text-error">{$valid->error('name')}</div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input class="form-control" id="name" type="text" name="name" value="{$valid->userInput('name')}">
+    <div class="text-danger">{$valid->error('name')}</div>
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="email">Email</label>
-    <input id="email" type="text" name="email" value="{$valid->userInput('email')}">
-    <div class="text-error">{$valid->error('email')}</div>
+    <input class="form-control" id="email" type="text" name="email" value="{$valid->userInput('email')}">
+    <div class="text-danger">{$valid->error('email')}</div>
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="message">Message</label>
-    <textarea id="message" name="message">{$valid->userInput('message')}</textarea>
-    <div class="text-error">{$valid->error('message')}</div>
+    <textarea class="form-control" id="message" name="message">{$valid->userInput('message')}</textarea>
+    <div class="text-danger">{$valid->error('message')}</div>
   </div>
 
-  <div>
-    <input type="submit" value="Send">
+  <div class="form-group">
+    <input class="btn btn-primary" type="submit" value="Send">
   </div>
 
 </form>
