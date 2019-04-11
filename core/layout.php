@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title><?php echo $meta['title']; ?></title>
-    
+
     <?php if(!empty($meta['description'])): ?>
         <meta name="description" content="<?php echo $meta['description']; ?>">
     <?php endif; ?>
@@ -22,8 +22,8 @@
       <a id="toggleMenu">Menu</a>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="resume.php">Resume</a></li>
           <li><a href="contact.php">Contact</a></li>
         </ul>
       </nav>
