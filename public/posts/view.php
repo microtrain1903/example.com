@@ -13,7 +13,7 @@ $stmt->execute([$slug]);
 
 $row = $stmt->fetch();
 $content .= "<h1>{$row['title']}</h1>";
-
+$content .= $row['body'];
 require '../../core/layout.php';
 
 
