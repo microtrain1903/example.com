@@ -20,7 +20,6 @@ $args = [
 $input = filter_input_array(INPUT_POST, $args);
 
 //1. First validate
-$message=null;
 if(!empty($input)){
 
     $valid->validation = [
@@ -34,29 +33,27 @@ if(!empty($input)){
 
     if(empty($valid->errors)){
         //2. Only process if we pass validation
-        if(!empty($input)){
 
-            //Strip white space, begining and end
-            $input = array_map('trim', $input);
-        
-            //Allow only whitelisted HTML
-            $input['body'] = cleanHTML($input['body']);
-        
-            //Create the slug
-            $slug = slug($input['title']);
-        
-            //Sanitiezed insert
-            $sql = 'INSERT INTO posts SET id=uuid(), title=:title, slug=:slug, body=:body';
-        
-            if($pdo->prepare($sql)->execute([
-                'title'=>$input['title'],
-                'slug'=>$slug,
-                'body'=>$input['body']
-            ])){
-               header('LOCATION:/posts');
-            }else{
-                $message = 'Something bad happened';
-            }
+        //Strip white space, begining and end
+        $input = array_map('trim', $input);
+    
+        //Allow only whitelisted HTML
+        $input['body'] = cleanHTML($input['body']);
+    
+        //Create the slug
+        $slug = slug($input['title']);
+    
+        //Sanitiezed insert
+        $sql = 'INSERT INTO posts SET id=uuid(), title=:title, slug=:slug, body=:body';
+    
+        if($pdo->prepare($sql)->execute([
+            'title'=>$input['title'],
+            'slug'=>$slug,
+            'body'=>$input['body']
+        ])){
+            header('LOCATION:/posts');
+        }else{
+            $message = 'Something bad happened';
         }
 
     }else{
