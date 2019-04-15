@@ -139,9 +139,13 @@ $content = <<<EOT
 <hr>
 <div>
     <a 
+        class="btn btn-danger"
         onclick="return confirm('Are you sure?')"
         href="/posts/delete.php?id={$fields['id']}">
-        Delete
+
+            <i class="fa fa-trash" aria-hidden="true"></i>
+            Delete
+
     </a>
 </div>
 EOT;

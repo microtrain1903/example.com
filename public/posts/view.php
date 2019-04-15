@@ -13,13 +13,21 @@ $stmt->execute([$slug]);
 
 $row = $stmt->fetch();
 
+$meta=[];
+$meta['title']=$row['title'];
+$meta['description']=$row['meta_description'];
+$meta['keywords']=$row['meta_keywords'];
+
 $content=<<<EOT
 <h1>{$row['title']}</h1>
 {$row['body']}
 
 <hr>
 <div>
-    <a href="/posts/edit.php?id={$row['id']}">Edit</a>
+    <a class="btn btn-primary" href="/posts/edit.php?id={$row['id']}">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        Edit
+    </a>
 </div>
 EOT;
 
