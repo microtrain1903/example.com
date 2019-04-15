@@ -96,13 +96,13 @@ if(!empty($input)){
     $fields['meta_description']=$valid->userInput('meta_description');
     $fields['meta_keywords']=$valid->userInput('meta_keywords');
 }
-//
+
 $meta=[];
-$meta['title']='Add a new post';
+$meta['title']='Edit: ' . $fields['title'];
 
 
 $content = <<<EOT
-<h1>Add a New Post</h1>
+<h1>{$meta['title']}</h1>
 {$message}
 <form method="post">
 
@@ -135,6 +135,15 @@ $content = <<<EOT
     <input type="submit" value="Submit" class="btn btn-primary">
 </div>
 </form>
+
+<hr>
+<div>
+    <a 
+        onclick="return confirm('Are you sure?')"
+        href="/posts/delete.php?id={$fields['id']}">
+        Delete
+    </a>
+</div>
 EOT;
 
 include '../../core/layout.php';
