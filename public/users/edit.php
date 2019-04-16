@@ -13,7 +13,7 @@ $message=null;
 
 $args = [
     'id'=>FILTER_SANITIZE_STRING, //strips HMTL
-    'email'=>FILTER_SANITIZE_STRING, //strips HMTL
+    'email'=>FILTER_SANITIZE_EMAIL,
     'first_name'=>FILTER_SANITIZE_STRING, //strips HMTL
     'last_name'=>FILTER_SANITIZE_STRING, //strips HMTL
 ];
@@ -102,10 +102,11 @@ if(!empty($input)){
 
 
 $meta=[];
-$meta['email']='Edit:' .$fields['email'];
+$meta['title']="Edit: {$fields['email']}";
+
 $content = <<<EOT
 
-<h1>{$meta['email']}</h1>
+<h1>{$meta['title']}</h1>
 {$message}
 <form method="post">
     <input name="id" type="hidden" value="{$fields['id']}">

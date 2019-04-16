@@ -31,8 +31,6 @@ $content=<<<EOT
 </div>
 EOT;
 
-
-
 require '../../core/layout.php';
 
 
