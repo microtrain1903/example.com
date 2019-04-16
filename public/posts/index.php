@@ -1,4 +1,5 @@
 <?php
+require '../../core/session.php';
 require '../../core/db_connect.php';
 
 $stmt = $pdo->query("SELECT * FROM posts");

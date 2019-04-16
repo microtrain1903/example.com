@@ -1,4 +1,5 @@
 <?php
+require '../core/session.php';
 require '../core/processContactForm.php';
 
 $meta=[];

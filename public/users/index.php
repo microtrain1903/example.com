@@ -1,5 +1,8 @@
 <?php
+require '../../core/session.php';
 require '../../core/db_connect.php';
+
+checkSession();
 
 $stmt = $pdo->query("SELECT * FROM users");
 

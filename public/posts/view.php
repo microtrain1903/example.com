@@ -1,4 +1,5 @@
 <?php
+require '../../core/session.php';
 include '../../core/db_connect.php';
 
 $args = [

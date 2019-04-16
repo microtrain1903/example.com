@@ -1,4 +1,6 @@
 <?php
+require '../core/session.php';
+
 $meta['title']='Thank You!';
 
 $content=<<<EOT

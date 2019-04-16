@@ -1,8 +1,11 @@
 <?php
+require '../../core/session.php';
 require '../../core/functions.php';
 require '../../config/keys.php';
 require '../../core/db_connect.php';
 require '../../core/About/src/Validation/Validate.php';
+
+checkSession();
 
 use About\Validation;
 
