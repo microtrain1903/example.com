@@ -8,9 +8,8 @@ $meta['title']="Reset Password";
 $content=<<<EOT
 <h1>Reset Password</h1>
 {$message}
-<form action="contact.php" method="POST">
+<form method="POST">
   
-
   <div class="form-group">
     <label for="name">Current Password</label>
     <input 
