@@ -9,6 +9,7 @@ $input = filter_input_array(INPUT_POST,[
 
 if(!empty($input)){
 
+    $input = array_map('trim', $input);
     $sql='SELECT id, hash FROM users WHERE email=:email';
 
     $stmt=$pdo->prepare($sql);
