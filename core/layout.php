@@ -44,17 +44,23 @@
                     <a class="nav-link" href="/posts">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/users">Users</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/contact.php">Contact</a>
                 </li>
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="/login.php">Login</a>
+                    <a class="nav-link" href="/users">Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout.php">Logout</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/login.php">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register.php">Register</a>
+                </li>
+
             </ul>
         </div>
     </nav>
