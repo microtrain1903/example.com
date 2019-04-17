@@ -15,9 +15,9 @@ while($row = $stmt->fetch()){
         "{$row['title']}</a>";
 }
 
-$content=<<<EOT
-<h1>My Blog</h1>
-<div class=\"list-group\">{$items}</div>
+$adminLinks=null;
+if(!empty($_SESSION['user']['id'])){
+$adminLinks=<<<EOT
 <hr>
 <div>
     <a class="btn btn-primary" href="/posts/add.php">
@@ -25,6 +25,12 @@ $content=<<<EOT
         Add
     </a>
 </div>
+EOT;
+}
+$content=<<<EOT
+<h1>My Blog</h1>
+<div class=\"list-group\">{$items}</div>
+{$adminLinks}
 EOT;
 
 require '../../core/layout.php';

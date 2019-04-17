@@ -19,10 +19,10 @@ $meta['title']=$row['title'];
 $meta['description']=$row['meta_description'];
 $meta['keywords']=$row['meta_keywords'];
 
-$content=<<<EOT
-<h1>{$row['title']}</h1>
-{$row['body']}
 
+$adminLinks=null;
+if(!empty($_SESSION['user']['id'])){
+$adminLinks=<<<EOT
 <hr>
 <div>
     <a class="btn btn-primary" href="/posts/edit.php?id={$row['id']}">
@@ -30,6 +30,12 @@ $content=<<<EOT
         Edit
     </a>
 </div>
+EOT;
+}
+$content=<<<EOT
+<h1>{$row['title']}</h1>
+{$row['body']}
+{$adminLinks}
 EOT;
 
 require '../../core/layout.php';
