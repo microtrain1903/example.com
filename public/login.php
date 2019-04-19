@@ -1,5 +1,5 @@
 <?php
-require '../core/session.php';
+require '../core/bootstrap.php';
 require '../core/db_connect.php';
 
 $input = filter_input_array(INPUT_POST,[

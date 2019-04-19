@@ -1,5 +1,5 @@
 <?php
-require '../../core/session.php';
+require '../../core/bootstrap.php';
 include '../../core/db_connect.php';
 
 $args = [

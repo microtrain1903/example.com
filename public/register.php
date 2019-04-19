@@ -1,5 +1,5 @@
 <?php
-require '../core/session.php';
+require '../core/bootstrap.php';
 require '../core/db_connect.php';
 require '../core/About/src/Validation/Validate.php';
 
